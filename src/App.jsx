@@ -1,13 +1,15 @@
+
 import "./App.css";
 import { useState, useRef } from 'react';
 import html2canvas from 'html2canvas';
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const initialImages = [
-  { id: 1, url: "https://picsum.photos/100?1", title: "One"},
-  {id: 2, url: "https://picsum.photos/100?2", title: "Two"},
-  {id: 3, url: "https://picsum.photos/100?3", title: "Three"}, 
-  { id: 4, url: "https://picsum.photos/100?4", title: "Four"},
-  {id: 5, url: "https://picsum.photos/100?5", title: "Five"},
-  {id: 6, url: "https://picsum.photos/100?6", title: "Six"}, 
+  { id: 1, url: "${base}/images/mothball.png", title: "One"},
+  {id: 2, url: "${base}/images/aloe.png", title: "Two"},
+  {id: 3, url: "/images/coffee.png", title: "Three"}, 
+  { id: 4, url: "${base}/images/nailpolish.png", title: "Four"},
+  {id: 5, url: "${base}/images/firewood.png", title: "Five"},
+  {id: 6, url: "/images/cake.png", title: "Six"}, 
 ]
 
 export default function Gallery(){
@@ -76,12 +78,9 @@ const downloadGallery = async () =>  {
 
 return(
   <div>
-    <input type="file"
-    multiple
-    onChange= {handleUpload}/> 
 
     <button onClick={downloadGallery}>
-Download your image set! 
+Download your scent! 
     </button>
   <div className="gallery" ref={galleryRef}> 
   {images.map(img => (
@@ -98,8 +97,6 @@ e.preventDefault(); //e is js object, checking what default behavior is (stoppin
     >
       
     <img src={img.url} alt={img.title}/>
-  <button className="remove-btn" 
-     onClick={() => removeImage(img.id)}> x  </button>
 
     </div>
   ))}
