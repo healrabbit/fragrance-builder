@@ -6,10 +6,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const initialImages = [
   { id: 1, url: `${base}/images/mothball.png`, title: "One"},
   {id: 2, url: `${base}/images/aloe.png`, title: "Two"},
-  {id: 3, url: `/images/coffee.png`, title: "Three"}, 
+  {id: 3, url: `${base}/images/coffee.png`, title: "Three"}, 
   { id: 4, url: `${base}/images/nailpolish.png`, title: "Four"},
   {id: 5, url: `${base}/images/firewood.png`, title: "Five"},
-  {id: 6, url: "/images/cake.png", title: "Six"}, 
+  {id: 6, url: `${base}/images/cake.png`, title: "Six"}, 
 ]
 
 export default function Gallery(){

@@ -26,14 +26,14 @@
   transition: border 0.2s, transform 0.2s;
 }
 
-/* Visual feedback for selected or dragging image */
+
 .image-wrapper.dragging {
   border: 4px solid blue;
   opacity: 0.6;
   transform: scale(1.05);
 }
 
-/* The image inside the wrapper */
+
 .image-wrapper img {
   width: 100%;
   height: 100%;
@@ -41,7 +41,6 @@
   display: block;
 }
 
-/* Hovered drop target */
 .image-wrapper.hovered {
   outline: 3px solid #4a90e2;
 }
