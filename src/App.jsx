@@ -1,14 +1,14 @@
-
 import "./App.css";
 import { useState, useRef } from 'react';
 import html2canvas from 'html2canvas';
+
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const initialImages = [
-  { id: 1, url: "${base}/images/mothball.png", title: "One"},
-  {id: 2, url: "${base}/images/aloe.png", title: "Two"},
-  {id: 3, url: "/images/coffee.png", title: "Three"}, 
-  { id: 4, url: "${base}/images/nailpolish.png", title: "Four"},
-  {id: 5, url: "${base}/images/firewood.png", title: "Five"},
+  { id: 1, url: `${base}/images/mothball.png`, title: "One"},
+  {id: 2, url: `${base}/images/aloe.png`, title: "Two"},
+  {id: 3, url: `/images/coffee.png`, title: "Three"}, 
+  { id: 4, url: `${base}/images/nailpolish.png`, title: "Four"},
+  {id: 5, url: `${base}/images/firewood.png`, title: "Five"},
   {id: 6, url: "/images/cake.png", title: "Six"}, 
 ]
 
@@ -38,19 +38,19 @@ setDraggedId(null);
 setHoveredId(null);
 };
 
-  const handleUpload = (e) => {
-    //make array from uploaded files
-    const files = Array.from(e.target.files)
-    //set info for all added images
-    const newImages = files.map((file,index) => ({
-      id:  Date.now() + index,
-      url: URL.createObjectURL(file),
-      title: file.name,
+  // const handleUpload = (e) => {
+  //   //make array from uploaded files
+  //   const files = Array.from(e.target.files)
+  //   //set info for all added images
+  //   const newImages = files.map((file,index) => ({
+  //     id:  Date.now() + index,
+  //     url: URL.createObjectURL(file),
+  //     title: file.name,
 
-    }))
-    //updating images to include new images
-    setImages([...images, ...newImages])
-    }
+  //   }))
+  //   //updating images to include new images
+  //   setImages([...images, ...newImages])
+  //   }
 
 const downloadGallery = async () =>  {
   //if gallery in DOM (loaded)
@@ -70,11 +70,11 @@ const downloadGallery = async () =>  {
 
 }
 
-  const removeImage = (id) => {
+  // const removeImage = (id) => {
   
-    setImages(images.filter((img) => img.id !== id))
-       console.log(images.filter((img) => img.id !== id))
-  }
+  //   setImages(images.filter((img) => img.id !== id))
+  //      console.log(images.filter((img) => img.id !== id))
+  // }
 
 return(
   <div>
