@@ -271,11 +271,11 @@ const bottomslots = Array.from({ length: bottomSlots }, (_, i) => bottomNotes[i]
       
       <div className="noteChart"
        ref={chartRef}>
-
      <center> <h2 className="scentname">{scentName}</h2> </center>
          <div className="header"> <h4> Top Notes</h4> </div>
 <center> 
   <div
+  //top notes
   className="top-notes"
   onDragOver={(e) => e.preventDefault()}
   onDrop={handleDropTop}
@@ -291,7 +291,7 @@ const bottomslots = Array.from({ length: bottomSlots }, (_, i) => bottomNotes[i]
     className={`noteslot ${draggedId?.id === img?.id ? "dragged" : ""}`}
     >
       
-    {img ? (
+    {img ? (  //if theres an image render it like this
     <div>
       <img src={img.url} alt={img.title} />
       <span>{img.title}</span>
@@ -303,7 +303,9 @@ const bottomslots = Array.from({ length: bottomSlots }, (_, i) => bottomNotes[i]
   ))}
 </div> </center>
 <div className="header">  <h4> Middle Notes</h4> </div>
+
 <center> <div
+  //middle notes
   className="middle-notes"
   onDragOver={(e) => e.preventDefault()}
   onDrop={handleDropMid}
@@ -319,7 +321,7 @@ const bottomslots = Array.from({ length: bottomSlots }, (_, i) => bottomNotes[i]
  className={`noteslot ${draggedId?.id === img?.id ? "dragged" : ""}`}
     >
        
-     {img ? (
+     {img ? (  //if theres an image render it like this
     <div>
       <img src={img.url} alt={img.title} />
       <span>{img.title}</span>
@@ -335,6 +337,7 @@ const bottomslots = Array.from({ length: bottomSlots }, (_, i) => bottomNotes[i]
 <center>
 <div
   className="bottom-notes"
+    //base notes
   onDragOver={(e) => e.preventDefault()}
   onDrop={handleDropBottom}
 >
@@ -348,7 +351,7 @@ const bottomslots = Array.from({ length: bottomSlots }, (_, i) => bottomNotes[i]
       onDrop={() => img}
  className={`noteslot ${draggedId?.id === img?.id ? "dragged" : ""}`}
     >
-        {img ? (
+        {img ? ( //if theres an image render it like this
     <div>
      <center> <img src={img.url} alt={img.title} />
       <span>{img.title}</span> </center>
@@ -361,7 +364,12 @@ const bottomslots = Array.from({ length: bottomSlots }, (_, i) => bottomNotes[i]
 </div>
 </center>
 </div>
-   <div className="menu">   
+
+
+
+   <div 
+   // menu with scent name input, button, and link to homepage
+   className="menu">   
      <input
         type="text"
         value={scentName}
