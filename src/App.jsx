@@ -71,10 +71,10 @@ const initialImages = [
   { id: 53, url: `${base}/images/coconut.png`, title: "Coconut" },
   { id: 54, url: `${base}/images/wool.png`, title: "Wool" },
   { id: 55, url: `${base}/images/cherry.png`, title: "Cherry" },
-  { id: 46, url: `${base}/images/curry.png`, title: "Curry" },
-  { id: 47, url: `${base}/images/lime.png`, title: "Lime" },
-  { id: 48, url: `${base}/images/blood.png`, title: "Blood" },
-  { id: 49, url: `${base}/images/toast.png`, title: "Toast" },
+  { id: 56, url: `${base}/images/curry.png`, title: "Curry" },
+  { id: 57, url: `${base}/images/lime.png`, title: "Lime" },
+  { id: 58, url: `${base}/images/blood.png`, title: "Blood" },
+  { id: 59, url: `${base}/images/toast.png`, title: "Toast" },
 ];
 
 
